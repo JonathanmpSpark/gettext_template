@@ -193,6 +193,12 @@ iframe {
   position: relative;
 }
 
+.wrap-login100-no-w {
+  background: rgb(24, 26, 27);
+  border-radius: 10px;
+  position: relative;
+}
+
 
 /*==================================================================
 [ Form ]*/
@@ -534,4 +540,9 @@ iframe {
   font-size: 14px;
   line-height: 1.4;
   text-align: left;
+}
+
+.custom-scrollable {
+  max-height: 384px;
+  overflow-x: hidden;
 }

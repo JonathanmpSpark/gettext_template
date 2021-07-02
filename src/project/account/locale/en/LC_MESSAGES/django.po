@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-28 04:55-0700\n"
+"POT-Creation-Date: 2021-07-02 00:27-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,6 +26,11 @@ msgstr "Username"
 msgid "Contraseña"
 msgstr "Password"
 
+#: account/forms.py:34
+msgctxt "territorio"
+msgid "Estado"
+msgstr ""
+
 #: account/forms.py:44
 msgid "Claro que si"
 msgstr ""
@@ -34,10 +39,20 @@ msgstr ""
 msgid "Aun no"
 msgstr ""
 
+#: account/forms.py:49
+msgctxt "civil"
+msgid "Estado"
+msgstr ""
+
 #: account/forms.py:59
 msgid "Activo"
 msgstr ""
 
 #: account/forms.py:60
 msgid "Inactivo"
+msgstr ""
+
+#: account/forms.py:64
+msgctxt "status"
+msgid "Estado"
 msgstr ""

@@ -20,6 +20,8 @@
         <link rel="stylesheet" type="text/css" href={% static 'libs/vendor/daterangepicker/daterangepicker.css' %}> {% endcomment %}
         <link rel="stylesheet" type="text/css" href={% static 'css/base_login/util.css' %}>
         <link rel="stylesheet" type="text/css" href={% static 'css/base_login/main.css' %}>
+        {% block css %}
+        {% endblock css %}
 </head>
 <body class='bg-dark'>
 	{% block content %}
@@ -35,6 +37,7 @@
         <script src={% static 'libs/vendor/daterangepicker/daterangepicker.js' %}></script>
         <script src={% static 'libs/vendor/countdowntime/countdowntime.js' %}></script> {% endcomment %}
         <script src={% static 'js/base_login/main.js' %}></script>
-    {% block script %}
-    {% endblock script %}
+        <script src="/jsi18n/"></script>
+    {% block scripts %}
+    {% endblock scripts %}
 </html>

@@ -23,6 +23,7 @@ def login(request):
 
 
 def example(request):
+    form = forms.ExampleForm( request.POST or None, use_required_attribute=False )
     template_name = "account/example.html"
     n = 1
     message1 = _n('%d archivo actualizado', '%d archivos actualizados', n)%n
@@ -30,7 +31,8 @@ def example(request):
     
     context = {
         'message1': message1,
-        'message2': message2
+        'message2': message2,
+        'form': form
     }
     return render(request, template_name, context)
     #return HttpResponse(f'{message1} <br>{message2}<br>OK!')
