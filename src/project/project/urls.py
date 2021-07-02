@@ -26,8 +26,10 @@ urlpatterns = [
     path('jsi18n/', JavaScriptCatalog.as_view(), name='javascript_catalog'),
     path('', views.default, name='default'),
     path('account/',include('account.urls', namespace='account')),
+    path('examples/',include('examples.urls', namespace='examples')),
 ]
 
 urlpatterns += i18n_patterns(
     path('account/', include('account.urls', namespace='i18n_account')),
+    path('examples/', include('examples.urls', namespace='i18n_examples')),
 )

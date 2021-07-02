@@ -14,25 +14,9 @@ def login(request):
     
     if request.method == 'POST':
         if form.is_valid():
-            return redirect(reverse('account:example'))
+            return redirect(reverse('examples:html'))
 
     context = {
         'form': form,
     }
     return render(request, template_name, context)
-
-
-def example(request):
-    form = forms.ExampleForm( request.POST or None, use_required_attribute=False )
-    template_name = "account/example.html"
-    n = 1
-    message1 = _n('%d archivo actualizado', '%d archivos actualizados', n)%n
-    message2 = _n('{contactos} contacto actualizado', '{contactos} contactos actualizados', n).format(contactos=n)
-    
-    context = {
-        'message1': message1,
-        'message2': message2,
-        'form': form
-    }
-    return render(request, template_name, context)
-    #return HttpResponse(f'{message1} <br>{message2}<br>OK!')

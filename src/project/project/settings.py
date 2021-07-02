@@ -20,7 +20,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-print(f'sdasdads---- >>   {PROJECT_ROOT}')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -43,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'account'
+    'account',
+    'examples'
 ]
 
 MIDDLEWARE = [
@@ -64,9 +64,18 @@ ROOT_URLCONF = 'project.urls'
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
 LOCALE_PATHS = (
-    os.path.join(PROJECT_ROOT, 'project/locale/'),
+    # account
     os.path.join(PROJECT_ROOT, 'account/locale/'),
-    os.path.join(PROJECT_ROOT, 'templates/locale/'),
+    os.path.join(PROJECT_ROOT, 'templates/account/locale'),
+    os.path.join(PROJECT_ROOT, 'static/js/account/locale'),
+    # examples
+    os.path.join(PROJECT_ROOT, 'examples/locale/'),
+    os.path.join(PROJECT_ROOT, 'templates/examples/locale'),
+    os.path.join(PROJECT_ROOT, 'static/js/examples/locale'),
+    # project
+    os.path.join(PROJECT_ROOT, 'project/locale/'),
+    os.path.join(PROJECT_ROOT, 'templates/project/locale'),
+    os.path.join(PROJECT_ROOT, 'static/js/project/locale'),
 )
 
 LANGUAGE_CODE = 'es-mx'

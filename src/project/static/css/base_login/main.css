@@ -546,3 +546,19 @@ iframe {
   max-height: 384px;
   overflow-x: hidden;
 }
+
+.no-block{
+    display: content !important;
+}
+
+.fs-100{
+  font-size: 100px !important;
+}
+
+.fs-50{
+  font-size: 50px !important;
+}
+
+.fs-20{
+  font-size: 20px !important;
+}
