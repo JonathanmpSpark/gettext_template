@@ -28,18 +28,6 @@ class LoginForm(forms.Form):
         )
     )
     
-class ExampleForm(forms.Form):
-    singular_or_plural = forms.CharField(
-        required = False,
-        label = _('Cantidad de articulos'),
-        max_length = 3,
-        widget = forms.TextInput(
-            attrs={
-                'class': 'input100'
-            }
-        )
-    )
-    
 
 
     

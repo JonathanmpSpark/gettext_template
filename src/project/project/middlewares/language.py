@@ -6,10 +6,10 @@ from django.utils import timezone
 import pytz
 from django.utils.deprecation import MiddlewareMixin
 
-class SubdomainLanguageMiddleware(MiddlewareMixin):
+class UrlLanguageMiddleware(MiddlewareMixin):
     """
     Set the language for the site based on the prefix url on the request.path
-    is being served on. For example, serving on 'localhost.com/es/account/login' would
+    is being served on. For example, serving on 'localhost.com/es' would
     make the language Spanish (es).
     """
     language_codes = [l[0] for l in settings.LANGUAGES]

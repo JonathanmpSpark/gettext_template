@@ -8,7 +8,7 @@ from django.utils.translation import (
 class ExampleForm(forms.Form):
     singular_or_plural = forms.CharField(
         required = False,
-        label = _('Cantidad de articulos'),
+        label = _('Cantidad de artículos'),
         max_length = 3,
         widget = forms.TextInput(
             attrs={

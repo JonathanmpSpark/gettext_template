@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'project.middlewares.language.SubdomainLanguageMiddleware',
+    'project.middlewares.language.UrlLanguageMiddleware',
     #'django.middleware.locale.LocaleMiddleware',
 ]
 
@@ -82,7 +82,7 @@ LANGUAGE_CODE = 'es-mx'
 
 LANGUAGES = (
     ('en', _('Ingles')),
-    ('es-mx', _('Mexico')),
+    ('es-mx', _('México')),
     ('es', _('Español')),
 )
 

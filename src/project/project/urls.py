@@ -18,18 +18,20 @@ from django.urls import path, include, re_path
 from django.views.i18n import JavaScriptCatalog
 from . import views
 from django.conf.urls.i18n import i18n_patterns
+from django.utils.translation import gettext_lazy as _
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # Internationalization in Javascript Code
-    path('jsi18n/', JavaScriptCatalog.as_view(), name='javascript_catalog'),
-    path('', views.default, name='default'),
-    path('account/',include('account.urls', namespace='account')),
-    path('examples/',include('examples.urls', namespace='examples')),
+    path( 'jsi18n/', JavaScriptCatalog.as_view(), name='javascript_catalog '),
+    path( '', views.default, name='default' ),
+    path( _('account/'), include('account.urls', namespace='account') ),
+    path( _('examples/'), include( 'examples.urls', namespace='examples') ),
 ]
 
 urlpatterns += i18n_patterns(
-    path('account/', include('account.urls', namespace='i18n_account')),
-    path('examples/', include('examples.urls', namespace='i18n_examples')),
+    path( '', views.default, name='default' ),
+    path( _('account/'), include('account.urls', namespace='i18n_account')),
+    path( _('examples/'), include('examples.urls', namespace='i18n_examples')),
 )
