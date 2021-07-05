@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-02 03:10-0700\n"
+"POT-Creation-Date: 2021-07-05 02:24-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,15 +17,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 #: templates/account/example.html:11 templates/account/login.html:5
 msgid "Bienvenido | Inicio de sesión"
 msgstr "Bienvenido | Inicio de sesión"
 
-#: templates/account/example.html:17 templates/account/example.html:27
+#: templates/account/example.html:17 templates/account/example.html:25
 msgid "Singular o plural"
 msgstr "Singular o plural"
 
-#: templates/account/example.html:44
+#: templates/account/example.html:42
 msgid "Obtener respuesta"
 msgstr "Obtener respuesta"
 

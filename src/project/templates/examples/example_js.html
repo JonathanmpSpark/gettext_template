@@ -76,10 +76,10 @@
                             </span>
                             <div class="m-b-36">
                                 <span class="txt1 p-b-11">
-                                    {{ form.singular_or_plural.label }}
+                                    {{ form.qty.label }}
                                 </span>
                                 <div class="wrap-input100 validate-input" >
-                                    {{ form.singular_or_plural }}
+                                    {{ form.qty }}
                                     <span class="focus-input100"></span>
                                 </div>
                             </div>
@@ -108,5 +108,5 @@
 
 {% block scripts %}
     <script src="{% static 'libs/vendor/jquery.steps/jquery.steps.js' %}"></script>
-    <script src="{% static 'js/account/example.js' %}"></script>
+    <script src="{% static 'js/examples/example.js' %}"></script>
 {% endblock scripts %}

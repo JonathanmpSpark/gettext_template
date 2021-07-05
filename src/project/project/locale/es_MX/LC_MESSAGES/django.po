@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-02 03:10-0700\n"
+"POT-Creation-Date: 2021-07-05 02:25-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 #: project/settings.py:84
 msgid "Ingles"
 msgstr ""
@@ -29,10 +30,10 @@ msgstr "México"
 msgid "Español"
 msgstr "Español"
 
-#: project/urls.py:29 project/urls.py:34
+#: project/urls.py:29 project/urls.py:35
 msgid "account/"
 msgstr "cuenta/"
 
-#: project/urls.py:30 project/urls.py:35
+#: project/urls.py:30 project/urls.py:36
 msgid "examples/"
 msgstr "ejemplos/"

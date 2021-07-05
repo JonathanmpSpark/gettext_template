@@ -16,59 +16,45 @@
 <div id="steps">
     <h3>{% trans "Singular o plural" %}</h3>
     <section>
-        <form action="{% url 'account:login' %}" method="POST">
-            {% csrf_token %}
-            <div class="row">
-                <!--CONTROLS-->
-                <div class="col-6">
-                    <div class="wrap-login100-no-w p-5">
-                        <form class="login100-form validate-form flex-sb flex-w">
-                            <span class="login100-form-title p-b-32">
-                                {% trans "Singular o plural" %}
+        <div class="row">
+            <!--CONTROLS-->
+            <div class="col-6">
+                <div class="wrap-login100-no-w p-5">
+                    <form class="login100-form validate-form flex-sb flex-w">
+                        <span class="login100-form-title p-b-32">
+                            {% trans "Singular o plural" %}
+                        </span>
+                        <div class="m-b-36">
+                            <span class="txt1 p-b-11">
+                                {{ form.qty.label }}
                             </span>
-                            <div class="m-b-36">
-                                <span class="txt1 p-b-11">
-                                    {{ form.singular_or_plural.label }}
-                                </span>
-                                <div class="wrap-input100 validate-input" >
-                                    {{ form.singular_or_plural }}
-                                    <span class="focus-input100"></span>
-                                </div>
+                            <div class="wrap-input100 validate-input" >
+                                {{ form.qty }}
+                                <span class="focus-input100"></span>
                             </div>
+                        </div>
 
-                            <div class="flex-sb-m w-full p-b-48">
-                            </div>
+                        <div class="flex-sb-m w-full p-b-48">
+                        </div>
 
-                            <div class="container-login100-form-btn">
-                                <button class="register100-form-btn btn-block" type="button">
-                                    {% trans "Obtener respuesta" %}
-                                </button>
-                            </div>
-                        </form>
-                    </div>  
-                </div>
-                
-                <!--Response-->
-                <div class="col-6 bg-light border border-dark rounded response-area custom-scrollable">
+                        <div class="container-login100-form-btn">
+                            <button class="register100-form-btn btn-block" type="button">
+                                {% trans "Obtener respuesta" %}
+                            </button>
+                        </div>
+                    </form>
+                </div>  
+            </div>   
+            <!--Response-->
+            <div class="col-6 bg-light border border-dark rounded response-area custom-scrollable">
                     
-                </div>
             </div>
-            
-       
-    </form>
-    </section>
-    <h3>Effects</h3>
-    <section>
-        <p>Wonderful transition effects.</p>
-    </section>
-    <h3>Pager</h3>
-    <section>
-        <p>The next and previous buttons help you to navigate through your content.</p>
+        </div>
     </section>
 </div>
 {% endblock content %}
 
 {% block scripts %}
     <script src="{% static 'libs/vendor/jquery.steps/jquery.steps.js' %}"></script>
-    <script src="{% static 'js/account/example.js' %}"></script>
+    <script src="{% static 'js/examples/example.js' %}"></script>
 {% endblock scripts %}

@@ -17,56 +17,44 @@
     <div id="steps">
         <h3>{% trans "Traducción simple" %}</h3>
         <section>
-            <form action="{% url 'account:login' %}" method="POST">
-                {% csrf_token %}
-                <div class="row">
-                    <!--CONTROLS-->
-                    <div class="col-12">
-                        <div class="wrap-login100-no-w p-5">
-                            <form class="login100-form validate-form flex-sb flex-w">
-                                <span class="login100-form-title p-b-32 no-block text-center fs-100">
+            <div class="row">
+                <!--CONTROLS-->
+                <div class="col-12">
+                    <div class="wrap-login100-no-w p-5"> 
+                        <span class="login100-form-title p-b-32 no-block text-center fs-100">
 
-                                    {% trans "Hola Mundo!" %}
+                            {% trans "Hola Mundo!" %}
 
-                                </span>
-                            </form>
-                        </div>  
-                    </div>
+                        </span>
+                    </div>  
                 </div>
-            </form>
+            </div>
         </section>
         <h3>{% trans "Palabras ambiguas" %}</h3>
         <section>
-            <form action="{% url 'account:login' %}" method="POST">
-                {% csrf_token %}
-                <div class="row">
-                    <!--CONTROLS-->
-                    <div class="col-6">
-                        <div class="wrap-login100-no-w p-5">
-                            <form class="login100-form validate-form flex-sb flex-w">
-                                <span class="login100-form-title p-b-32 no-block text-center fs-50">
+            <div class="row">
+                <!--CONTROLS-->
+                <div class="col-6">
+                    <div class="wrap-login100-no-w p-5">
+                        <span class="login100-form-title p-b-32 no-block text-center fs-50">
 
-                                    {% trans "Estado" context "País"%}
+                            {% trans "Estado" context "País"%}
 
-                                </span>
-                            </form>
-                        </div>  
-                    </div>
-                    <div class="col-6">
-                        <div class="wrap-login100-no-w p-5">
-                            <form class="login100-form validate-form flex-sb flex-w">
-                                <span class="login100-form-title p-b-32 no-block text-center fs-50">
-
-                                    {% trans "Estado" context "Actividad"%}
-
-                                </span>
-                            </form>
-                        </div>  
-                    </div>
-                    <div class="flex-sb-m w-full p-b-48">
-                    </div>
+                        </span>
+                    </div>  
                 </div>
-            </form>
+                <div class="col-6">
+                    <div class="wrap-login100-no-w p-5">
+                        <span class="login100-form-title p-b-32 no-block text-center fs-50">
+
+                            {% trans "Estado" context "Estatus"%}
+
+                        </span>
+                    </div>  
+                </div>
+                <div class="flex-sb-m w-full p-b-48">
+                </div>
+            </div>
         </section>
     </div>
 </div>

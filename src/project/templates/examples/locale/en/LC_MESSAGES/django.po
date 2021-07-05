@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-02 03:33-0700\n"
+"POT-Creation-Date: 2021-07-05 02:20-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,45 +22,49 @@ msgid "Ejemplo HTML"
 msgstr "Example HTML"
 
 #: templates/examples/example_html.html:18
-#: templates/examples/example_js.html:17 templates/examples/example_py.html:17
+#: templates/examples/example_js.html:17 templates/examples/example_py.html:20
 msgid "Traducción simple"
 msgstr "Easy translation"
 
-#: templates/examples/example_html.html:29
-#: templates/examples/example_html.html:37
-#: templates/examples/example_js.html:27 templates/examples/example_py.html:27
+#: templates/examples/example_html.html:26
+#: templates/examples/example_js.html:27
 msgid "Hola Mundo!"
 msgstr "Hello World!"
 
-#: templates/examples/example_html.html:47
+#: templates/examples/example_html.html:33
+#: templates/examples/example_py.html:41
 msgid "Palabras ambiguas"
 msgstr "Ambiguous words"
 
-#: templates/examples/example_html.html:58
-#: templates/examples/example_js.html:46 templates/examples/example_py.html:46
+#: templates/examples/example_html.html:41
+#: templates/examples/example_js.html:46
 msgctxt "País"
 msgid "Estado"
 msgstr "State"
 
-#: templates/examples/example_html.html:69
-#: templates/examples/example_js.html:57 templates/examples/example_py.html:57
-msgctxt "Actividad"
+#: templates/examples/example_html.html:50
+msgctxt "Estatus"
 msgid "Estado"
-msgstr "Condition"
-
-#: templates/examples/example_html.html:80
-msgid "Estado"
-msgstr "Estado"
+msgstr "Status"
 
 #: templates/examples/example_js.html:11 templates/examples/example_py.html:11
 msgid "Bienvenido | Inicio de sesión"
 msgstr "Welcome | Log in"
 
+#: templates/examples/example_js.html:57
+msgctxt "Actividad"
+msgid "Estado"
+msgstr "Condition"
+
 #: templates/examples/example_js.html:65 templates/examples/example_js.html:75
-#: templates/examples/example_py.html:65 templates/examples/example_py.html:75
+#: templates/examples/example_py.html:66 templates/examples/example_py.html:75
 msgid "Singular o plural"
 msgstr "Singular or plural"
 
-#: templates/examples/example_js.html:92 templates/examples/example_py.html:92
+#: templates/examples/example_js.html:92
 msgid "Obtener respuesta"
 msgstr "Get response"
+
+#: templates/examples/example_py.html:92
+msgid "Agregar al carrito"
+msgstr "Add to cart"

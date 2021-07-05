@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-02 03:10-0700\n"
+"POT-Creation-Date: 2021-07-05 02:24-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,7 +16,23 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: examples/api.py:12
+msgid "Ingresa un valor numérico"
+msgstr ""
+
+#: examples/api.py:15
+#, python-brace-format
+msgid "{qty} articulo agregado"
+msgid_plural "{qty} articulos agregados"
+msgstr[0] "{qty} articulo agregado"
+msgstr[1] "{qty} articulos agregados"
+
 #: examples/forms.py:11
 msgid "Cantidad de artículos"
 msgstr "Cantidad de artículos"
+
+#: examples/views.py:36
+msgid "Hola Mundo"
+msgstr "Hola Mundo"
