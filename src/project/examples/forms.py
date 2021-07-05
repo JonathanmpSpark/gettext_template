@@ -6,7 +6,7 @@ from django.utils.translation import (
 
 
 class ExampleForm(forms.Form):
-    qty = forms.CharField(
+    cantidad = forms.CharField(
         required = False,
         label = _('Cantidad de artículos'),
         max_length = 3,
@@ -17,7 +17,7 @@ class ExampleForm(forms.Form):
         )
     )
 
-    state = forms.CharField(
+    estado = forms.CharField(
         required = False,
         label = _c('País', 'Estado'),
         max_length = 3,
@@ -28,7 +28,7 @@ class ExampleForm(forms.Form):
         )
     )
 
-    status = forms.CharField(
+    estatus = forms.CharField(
         required = False,
         label = _c('Estatus', 'Estado'),
         max_length = 3,

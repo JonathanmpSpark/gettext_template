@@ -20,14 +20,14 @@ msgstr ""
 
 #: examples/api.py:12
 msgid "Ingresa un valor numérico"
-msgstr ""
+msgstr "Ingresa un valor numérico"
 
 #: examples/api.py:15
 #, python-brace-format
-msgid "{qty} articulo agregado"
-msgid_plural "{qty} articulos agregados"
-msgstr[0] "{qty} articulo agregado"
-msgstr[1] "{qty} articulos agregados"
+msgid "{cantidad} articulo agregado"
+msgid_plural "{cantidad} articulos agregados"
+msgstr[0] "{cantidad} articulo agregado"
+msgstr[1] "{cantidad} articulos agregados"
 
 #: examples/forms.py:11
 msgid "Cantidad de artículos"

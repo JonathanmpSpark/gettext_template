@@ -12,5 +12,5 @@ urlpatterns = [
     path('js', views.js, name='js'),
 
 
-    path('api/add_item', api.add_to_cart, name='add_to_cart'),
+    path('api/add_item', api.agregar_al_carrito, name='add_to_cart'),
 ]

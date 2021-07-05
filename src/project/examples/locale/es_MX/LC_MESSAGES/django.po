@@ -24,10 +24,10 @@ msgstr "Ingresa un valor numérico desde México"
 
 #: examples/api.py:15
 #, python-brace-format
-msgid "{qty} articulo agregado"
-msgid_plural "{qty} articulos agregados"
-msgstr[0] "{qty} articulo agregado desde México"
-msgstr[1] "{qty} articulos agregados desde México"
+msgid "{cantidad} articulo agregado"
+msgid_plural "{cantidad} articulos agregados"
+msgstr[0] "{cantidad} articulo agregado desde México"
+msgstr[1] "{cantidad} articulos agregados desde México"
 
 #: examples/forms.py:11
 msgid "Cantidad de artículos"

@@ -11,14 +11,6 @@ from django.utils.translation import gettext as _, ngettext as _n
 
 # Create your views here.
 
-def example(request):
-    form = forms.ExampleForm( request.POST or None, use_required_attribute=False )
-    
-    context = {
-        'form': form
-    }
-    return render(request, "account/example.html", context)
-
 def html(request):
     form = forms.ExampleForm( request.POST or None, use_required_attribute=False )
     
