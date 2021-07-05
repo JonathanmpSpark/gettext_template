@@ -15,6 +15,13 @@ django-admin makemessages -l es
 
 django-admin makemessages -l es_MX
 
+django-admin makemessages -d djangojs -l en
+
+django-admin makemessages -d djangojs -l es
+
+django-admin makemessages -d djangojs -l es_MX
+
+
 
 # Generar binario de las traducciones
 django-admin compilemessages
