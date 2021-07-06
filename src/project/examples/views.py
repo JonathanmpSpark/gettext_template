@@ -15,7 +15,7 @@ def html(request):
     form = forms.ExampleForm( request.POST or None, use_required_attribute=False )
     
     context = {
-        'form': form
+        'hello_word': _('Hola Mundo'),
     }
     return render(request, "examples/example_html.html", context)
 
@@ -31,4 +31,9 @@ def py(request):
 
 
 def js(request):
-    return HttpResponse('js')
+    form = forms.ExampleForm( request.POST or None, use_required_attribute=False )
+    
+    context = {
+        'form': form
+    }
+    return render(request, "examples/example_js.html", context)

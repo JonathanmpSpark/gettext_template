@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-05 02:36-0700\n"
+"POT-Creation-Date: 2021-07-06 02:36-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,39 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: static/js/examples/example.js:7
+#: static/js/examples/example.js:10
 msgid "Anterior"
 msgstr "Anterior MX"
 
-#: static/js/examples/example.js:8
+#: static/js/examples/example.js:11
 msgid "Siguiente"
 msgstr "Siguiente MX"
 
-#: static/js/examples/example.js:9
+#: static/js/examples/example.js:12
 msgid "Finalizar"
 msgstr "Finalizar MX"
+
+#: static/js/examples/example_js.js:3
+msgid "Hola Mundo"
+msgstr "Hola Mundo (JS MX)!"
+
+#: static/js/examples/example_js.js:6
+msgctxt "país"
+msgid "Estado"
+msgstr "Entidad federativa (JS MX)"
+
+#: static/js/examples/example_js.js:9
+msgctxt "estatus"
+msgid "Estado"
+msgstr "Estatus (JS MX)"
+
+#: static/js/examples/example_js.js:16
+#, javascript-format
+msgid "%s articulo agregado"
+msgid_plural "%s articulos agregados"
+msgstr[0] "%s articulo agregado (JS MX)"
+msgstr[1] "%s articulos agregados (JS MX)"
+
+#: static/js/examples/example_js.js:20
+msgid "Ingresa un valor numérico"
+msgstr "Ingresa un valor numérico (JS MX)"

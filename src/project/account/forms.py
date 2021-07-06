@@ -1,8 +1,7 @@
 from django import forms
 from django.utils.translation import (
     pgettext_lazy,
-    ugettext_lazy as _,
-    #gettext as _,
+    ugettext_lazy as _
 )
 
 class LoginForm(forms.Form):

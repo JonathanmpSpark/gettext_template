@@ -12,7 +12,7 @@ class UrlLanguageMiddleware(MiddlewareMixin):
     is being served on. For example, serving on 'localhost.com/es' would
     make the language Spanish (es).
     """
-    language_codes = [l[0] for l in settings.LANGUAGES]
+    language_codes = [ l[0] for l in settings.LANGUAGES ]
     lang = settings.LANGUAGE_CODE
 
     def process_request(self, request):

@@ -8,109 +8,108 @@
 
 
 {% block title %}
-    {% trans "Bienvenido | Inicio de sesión" %}
+    {% trans "Ejemplo PY" %}
 {% endblock title %}
 
 
 {% block content %}
-<div class="container m-t-50">
-    <div id="steps">
-
-
-        <h3>{% trans "Traducción simple" %}</h3>
-        <section>
-            <form action="{% url 'account:login' %}" method="POST">
-                {% csrf_token %}
+    <h1 class="login100-form-title text-center fs-50 m-t-20">PYTHON</h1>
+    <div class="container m-t-50">
+        <div id="steps">
+            <h3>{% trans "Traducción simple" %}</h3>
+            <section>
                 <div class="row">
                     <!--CONTROLS-->
                     <div class="col-12">
                         <div class="wrap-login100-no-w p-5">
-                            <form class="login100-form validate-form flex-sb flex-w">
-                                <span class="login100-form-title p-b-32 no-block text-center fs-100">
-                                    {{ hello_word }}
-                                </span>
+                            <span class="login100-form-title p-b-32 no-block text-center fs-50">
+
+                                {{ hello_word }}
                             
-                            </form>
+                            </span>
                         </div>  
                     </div>
                 </div>
-            </form>
-        </section>
+            </section>
 
-
-        <h3>{% trans "Palabras ambiguas" %}</h3>
-        <section>
-            <div class="row">
-                <div class="col-6">
-                    <div class="wrap-login100-no-w p-5"> 
-                        <span class="login100-form-title p-b-32 no-block text-center fs-50">
-
-                            {{ form.estado.label }}
-
-                        </span>
-                    </div>  
-                </div>
-                <div class="col-6">
-                    <div class="wrap-login100-no-w p-5">
-                        <span class="login100-form-title p-b-32 no-block text-center fs-50">
-
-                            {{ form.estatus.label }}
-
-                        </span>
-                    </div>  
-                </div>
-            </div>
-        </section>
-
-
-        <h3>{% trans "Singular o plural" %}</h3>
-        <section>
-            <form id="form" action="{% url 'examples:add_to_cart' %}" method="get" >
-                {% csrf_token %}
+            
+            <h3>{% trans "Palabras ambiguas" %}</h3>
+            <section>
                 <div class="row">
-                    <!--CONTROLS-->
+                    <div class="col-6">
+                        <div class="wrap-login100-no-w p-5"> 
+                            <span class="login100-form-title p-b-32 no-block text-center fs-50">
+
+                                {{ form.estado.label }}
+                                <p>país</p>
+
+                            </span>
+                        </div>  
+                    </div>
                     <div class="col-6">
                         <div class="wrap-login100-no-w p-5">
-                            <span class="login100-form-title p-b-32">
-                                {% trans "Singular o plural" %}
+                            <span class="login100-form-title p-b-32 no-block text-center fs-50">
+
+                                {{ form.estatus.label }}
+                                <p>estatus</p>
+
                             </span>
-                            <div class="m-b-36">
-                                <span class="txt1 p-b-11">
-                                    {{ form.cantidad.label }}
-                                </span>
-                                <div class="wrap-input100 validate-input" >
-                                    {{ form.cantidad }}
-                                    <span class="focus-input100"></span>
-                                </div>
-                            </div>
-
-                            <div class="flex-sb-m w-full p-b-48">
-                            </div>
-
-                            <div class="container-login100-form-btn">
-                                <button id="add2cart" class="register100-form-btn btn-block" type="submit">
-                                    {% trans "Agregar al carrito" %}
-                                </button>
-                            </div>
-                            
                         </div>  
                     </div>
-                        
-                    <!--Response-->
-                    <div class="col-6 bg-light border border-dark rounded response-area custom-scrollable">
-                            
-                    </div>
                 </div>
-            </form>
-        </section>
+            </section>
+
+
+            <h3>{% trans "Singular o plural" %}</h3>
+            <section>
+                <form id="form" action="{% url 'examples:add_to_cart' %}" method="get" >
+                    {% csrf_token %}
+                    <div class="row">
+                        <!--CONTROLS-->
+                        <div class="col-6">
+                            <div class="wrap-login100-no-w p-5">
+                                <span class="login100-form-title p-b-32">
+                                    {% trans "Singular o plural" %}
+                                </span>
+                                <div class="m-b-36">
+                                    <span class="txt1 p-b-11">
+                                        {{ form.cantidad.label }}
+                                    </span>
+                                    <div class="wrap-input100 validate-input" >
+                                        {{ form.cantidad }}
+                                        <span class="focus-input100"></span>
+                                    </div>
+                                </div>
+
+                                <div class="flex-sb-m w-full p-b-48">
+                                </div>
+
+                                <div class="container-login100-form-btn">
+                                    <button id="add2cart" class="register100-form-btn btn-block" type="submit">
+                                        {% trans "Agregar al carrito" %}
+                                    </button>
+                                </div>
+                                
+                            </div>  
+                        </div>
+                            
+                        <!--Response-->
+                        <div class="col-6 bg-light border border-dark rounded response-area custom-scrollable">
+                                
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
     </div>
-</div>
 {% endblock content %}
 
 {% block scripts %}
+    <script>
+        var nextURL = "{% url 'i18n_examples:js' %}"
+    </script>
     <script src="{% static 'libs/vendor/jquery.steps/jquery.steps.js' %}"></script>
-    <script src="{% static 'js/examples/example.js' %}"></script>
-
+    <script src="{% static 'js/examples/example.js' %}"></script>   
     <script>
         $('#form').on('submit', function(e){
             e.preventDefault();
@@ -118,6 +117,7 @@
             {cantidad: $('#id_cantidad').val()}
             ,function(response){
                 $('.response-area').append($('<p>', { text: response['message'] }));
+                $('#id_cantidad').val('');
             });
         });
     </script>

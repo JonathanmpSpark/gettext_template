@@ -14,7 +14,6 @@ def login(request):
     
     if request.method == 'POST':
         if form.is_valid():
-            print(f"------------> {reverse('i18n_examples:html')}")
             return redirect(reverse('i18n_examples:html'))
 
     context = {

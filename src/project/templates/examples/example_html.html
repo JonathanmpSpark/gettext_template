@@ -13,54 +13,99 @@
 
 
 {% block content %}
-<div class="container m-t-50">
-    <div id="steps">
-        <h3>{% trans "Traducción simple" %}</h3>
-        <section>
-            <div class="row">
-                <!--CONTROLS-->
-                <div class="col-12">
-                    <div class="wrap-login100-no-w p-5"> 
-                        <span class="login100-form-title p-b-32 no-block text-center fs-100">
+    <h1 class="login100-form-title text-center fs-50 m-t-20">HTML</h1>
+    <div class="container m-t-50">
+        <div id="steps">
 
-                            {% trans "Hola Mundo!" %}
 
-                        </span>
-                    </div>  
+            <h3>{% trans "Traducción simple" %}</h3>
+            <section>
+                <div class="row">
+                    <!--CONTROLS-->
+                    <div class="col-12">
+                        <div class="wrap-login100-no-w p-5"> 
+                            <span class="login100-form-title p-b-32 no-block text-center fs-50">
+
+                                {% trans "Hola Mundo!" %}
+
+                            </span>
+                        </div>  
+                    </div>
                 </div>
-            </div>
-        </section>
-        <h3>{% trans "Palabras ambiguas" %}</h3>
-        <section>
-            <div class="row">
-                <!--CONTROLS-->
-                <div class="col-6">
-                    <div class="wrap-login100-no-w p-5">
-                        <span class="login100-form-title p-b-32 no-block text-center fs-50">
+            </section>
 
-                            {% trans "Estado" context "País"%}
 
-                        </span>
-                    </div>  
+            <h3>{% trans "Traducción con variables" %}</h3>
+            <section>
+                <div class="row">
+                    <!--CONTROLS-->
+                    <div class="col-12">
+                        <div class="wrap-login100-no-w p-5"> 
+                            <span class="login100-form-title p-b-32 no-block text-center fs-50">
+
+                                {% blocktranslate %}Utilizando blocktranslate: "{{ hello_word }}"{% endblocktranslate %}
+
+                            </span>
+                        </div>  
+                    </div>
                 </div>
-                <div class="col-6">
-                    <div class="wrap-login100-no-w p-5">
-                        <span class="login100-form-title p-b-32 no-block text-center fs-50">
+            </section>
 
-                            {% trans "Estado" context "Estatus"%}
 
-                        </span>
-                    </div>  
+            <h3>{% trans "Palabras ambiguas" %}</h3>
+            <section>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="wrap-login100-no-w p-5">
+                            <span class="login100-form-title p-b-32 no-block text-center fs-50">
+
+                                {% trans "Estado" context "país"%}
+                                <p>país</p>
+
+                            </span>
+                        </div>  
+                    </div>
+                    <div class="col-6">
+                        <div class="wrap-login100-no-w p-5">
+                            <span class="login100-form-title p-b-32 no-block text-center fs-50">
+
+                                {% trans "Estado" context "estatus"%}
+                                <p>estatus</p>
+
+                            </span>
+                        </div>  
+                    </div>
+                    <div class="flex-sb-m w-full p-b-48">
+                    </div>
                 </div>
-                <div class="flex-sb-m w-full p-b-48">
+            </section>
+
+            
+            <h3>{% trans "Identificador" %}</h3>
+            <section>
+                <div class="row">
+                    <!--CONTROLS-->
+                    <div class="col-12">
+                        <div class="wrap-login100-no-w p-5"> 
+                            <span class="login100-form-title p-b-32 no-block text-center fs-50">
+
+                                {% trans "dialogo_largo_01" %}
+
+                            </span>
+                        </div>  
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+        </div>
     </div>
-</div>
 {% endblock content %}
 
 {% block scripts %}
+    <script>
+        var nextURL = "{% url 'i18n_examples:py' %}"
+
+    </script>
     <script src="{% static 'libs/vendor/jquery.steps/jquery.steps.js' %}"></script>
-    <script src="{% static 'js/examples/example_html.js' %}"></script>
+    <script src="{% static 'js/examples/example.js' %}"></script>
 {% endblock scripts %}

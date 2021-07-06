@@ -19,7 +19,7 @@ class ExampleForm(forms.Form):
 
     estado = forms.CharField(
         required = False,
-        label = _c('País', 'Estado'),
+        label = _c('país', 'Estado'),
         max_length = 3,
         widget = forms.TextInput(
             attrs={
@@ -30,7 +30,7 @@ class ExampleForm(forms.Form):
 
     estatus = forms.CharField(
         required = False,
-        label = _c('Estatus', 'Estado'),
+        label = _c('estatus', 'Estado'),
         max_length = 3,
         widget = forms.TextInput(
             attrs={

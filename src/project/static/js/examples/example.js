@@ -3,6 +3,9 @@ $("#steps").steps({
     bodyTag: "section",
     transitionEffect: "slideLeft",
     autoFocus: true,
+    onFinished: () => {
+        window.location.href = nextURL;
+    },
     labels:{
         previous: gettext('Anterior'),
         next: gettext('Siguiente'),

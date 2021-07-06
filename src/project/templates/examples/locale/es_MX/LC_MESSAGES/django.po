@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-05 02:25-0700\n"
+"POT-Creation-Date: 2021-07-06 03:19-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,52 +20,65 @@ msgstr ""
 
 #: templates/examples/example_html.html:11
 msgid "Ejemplo HTML"
-msgstr "Ejemplo HTML desde México"
+msgstr "Ejemplo HTML MX"
 
-#: templates/examples/example_html.html:18
-#: templates/examples/example_js.html:17 templates/examples/example_py.html:20
+#: templates/examples/example_html.html:21
+#: templates/examples/example_js.html:20 templates/examples/example_py.html:19
 msgid "Traducción simple"
-msgstr "Traducción simple desde México"
+msgstr "Traducción simple MX"
 
-#: templates/examples/example_html.html:26
-#: templates/examples/example_js.html:27
+#: templates/examples/example_html.html:29
 msgid "Hola Mundo!"
-msgstr "Hola Mundo desde México!"
+msgstr "Hola Mundo! MX"
 
-#: templates/examples/example_html.html:33
-#: templates/examples/example_py.html:41
+#: templates/examples/example_html.html:38
+msgid "Traducción con variables"
+msgstr "Traducción simple MX"
+
+#: templates/examples/example_html.html:46
+#, python-format
+msgid "Utilizando blocktranslate: \"%(hello_word)s\""
+msgstr "Utilizando blocktranslate: \"%(hello_word)s\"  MX"
+
+#: templates/examples/example_html.html:55
+#: templates/examples/example_js.html:36 templates/examples/example_py.html:36
 msgid "Palabras ambiguas"
-msgstr "Palabras ambiguas desde México"
+msgstr "Palabras ambiguas  MX"
 
-#: templates/examples/example_html.html:41
-#: templates/examples/example_js.html:46
-msgctxt "País"
+#: templates/examples/example_html.html:62
+msgctxt "país"
 msgid "Estado"
-msgstr "Entidad federativa"
+msgstr "Entidad federativa  MX"
 
-#: templates/examples/example_html.html:50
-msgctxt "Estatus"
+#: templates/examples/example_html.html:72
+msgctxt "estatus"
 msgid "Estado"
-msgstr "Estatus"
+msgstr "Estatus MX"
 
-#: templates/examples/example_js.html:11 templates/examples/example_py.html:11
-msgid "Bienvenido | Inicio de sesión"
-msgstr "Bienvenido MX | Inicio de sesión"
+#: templates/examples/example_html.html:84
+msgid "Identificador"
+msgstr "Identificador MX"
 
-#: templates/examples/example_js.html:57
-msgctxt "Actividad"
-msgid "Estado"
-msgstr "Estatus"
+#: templates/examples/example_html.html:92
+msgid "dialogo_largo_01"
+msgstr "Esta es una redacción muy larga en \"MX\""
 
-#: templates/examples/example_js.html:65 templates/examples/example_js.html:75
-#: templates/examples/example_py.html:66 templates/examples/example_py.html:75
+#: templates/examples/example_js.html:11
+msgid "Ejemplo JS"
+msgstr "Ejemplo JS MX"
+
+#: templates/examples/example_js.html:63 templates/examples/example_js.html:69
+#: templates/examples/example_py.html:63 templates/examples/example_py.html:72
 msgid "Singular o plural"
-msgstr "Singular o plural desde México"
+msgstr "Singular o plural MX"
 
-#: templates/examples/example_js.html:92
-msgid "Obtener respuesta"
-msgstr "Obtener respuesta desde México"
-
-#: templates/examples/example_py.html:92
+#: templates/examples/example_js.html:86 templates/examples/example_py.html:89
 msgid "Agregar al carrito"
-msgstr "Agregar al carrito desde México"
+msgstr "Agregar al carrito MX"
+
+#: templates/examples/example_py.html:11
+msgid "Ejemplo PY"
+msgstr "Ejemplo PY MX"
+
+#~ msgid "Obtener respuesta"
+#~ msgstr "Obtener respuesta MX"

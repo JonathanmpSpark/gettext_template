@@ -8,69 +8,63 @@
 
 
 {% block title %}
-    {% trans "Bienvenido | Inicio de sesión" %}
+    {% trans "Ejemplo JS" %}
 {% endblock title %}
 
 
 {% block content %}
-<div id="steps">
-    <h3>{% trans "Traducción simple" %}</h3>
-    <section>
-        <form action="{% url 'account:login' %}" method="POST">
-            {% csrf_token %}
-            <div class="row">
-                <!--CONTROLS-->
-                <div class="col-12">
-                    <div class="wrap-login100-no-w p-5">
-                        <form class="login100-form validate-form flex-sb flex-w">
-                            <span class="login100-form-title p-b-32 no-block text-center fs-100">
-                                {% trans "Hola Mundo!" %}
+    <h1 class="login100-form-title text-center fs-50 m-t-20">JS</h1>
+    <div class="container m-t-50">
+        <div id="steps">
+        
+            <h3>{% trans "Traducción simple" %}</h3>
+            <section>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="wrap-login100-no-w p-5">
+                            <span id="hola_mundo" class="replace_translate login100-form-title p-b-32 no-block text-center fs-50">
+                                    
+                                Hola Mundo
+                                
                             </span>
-                           
-                        </form>
-                    </div>  
+                        </div>  
+                    </div>
                 </div>
-            </div>
-        </form>
-    </section>
-    <h3>Palabras ambiguas</h3>
-    <section>
-        <form action="{% url 'account:login' %}" method="POST">
-            {% csrf_token %}
-            <div class="row">
-                <!--CONTROLS-->
-                <div class="col-6">
-                    <div class="wrap-login100-no-w p-5">
-                        <form class="login100-form validate-form flex-sb flex-w">
-                            <span class="login100-form-title p-b-32 no-block text-center fs-50">
-                                {% trans "Estado" context "País"%}
+            </section>
+
+
+            <h3>{% trans "Palabras ambiguas" %}</h3>
+            <section>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="wrap-login100-no-w p-5"> 
+                            <span id="pais" class="replace_translate login100-form-title p-b-32 no-block text-center fs-50">
+
+                                Estado
+                                <p>país</p>
+
                             </span>
-                            
-                           
-                        </form>
-                    </div>  
-                </div>
-                <div class="col-6">
-                    <div class="wrap-login100-no-w p-5">
-                        <form class="login100-form validate-form flex-sb flex-w">
-                            <span class="login100-form-title p-b-32 no-block text-center fs-50">
-                                {% trans "Estado" context "Actividad"%}
+                        </div>  
+                    </div>
+                    <div class="col-6">
+                        <div class="wrap-login100-no-w p-5">
+                            <span id="estatus" class="replace_translate login100-form-title p-b-32 no-block text-center fs-50">
+
+                                Estado
+                                <p>estatus</p>
+
                             </span>
-                        </form>
-                    </div>  
+                        </div>  
+                    </div>
                 </div>
-            </div>
-        </form>
-    </section>
-    <h3>{% trans "Singular o plural" %}</h3>
-    <section>
-        <form action="{% url 'account:login' %}" method="POST">
-            {% csrf_token %}
-            <div class="row">
-                <!--CONTROLS-->
-                <div class="col-6">
-                    <div class="wrap-login100-no-w p-5">
-                        <form class="login100-form validate-form flex-sb flex-w">
+            </section>
+
+
+            <h3>{% trans "Singular o plural" %}</h3>
+            <section>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="wrap-login100-no-w p-5">
                             <span class="login100-form-title p-b-32">
                                 {% trans "Singular o plural" %}
                             </span>
@@ -88,25 +82,37 @@
                             </div>
 
                             <div class="container-login100-form-btn">
-                                <button class="register100-form-btn btn-block" type="button">
-                                    {% trans "Obtener respuesta" %}
+                                <button id="carrito" class="replace_translate register100-form-btn btn-block" type="button">
+                                    {% trans "Agregar al carrito" %}
                                 </button>
                             </div>
-                        </form>
-                    </div>  
+                                
+                        </div>  
+                    </div>
+                            
+                    <!--Response-->
+                    <div class="col-6 bg-light border border-dark rounded response-area custom-scrollable">
+                                
+                    </div>
                 </div>
-                
-                <!--Response-->
-                <div class="col-6 bg-light border border-dark rounded response-area custom-scrollable">
-                    
-                </div>
-            </div>
-        </form>
-    </section>
-</div>
+            </section>
+        </div>
+    </div>
 {% endblock content %}
 
 {% block scripts %}
+    <script>
+        var nextURL = "{% url 'i18n_account:login' %}"
+        $('#form').on('submit', function(e){
+            e.preventDefault();
+            $.get("{% url 'examples:add_to_cart' %}",
+            {cantidad: $('#id_cantidad').val()}
+            ,function(response){
+                $('.response-area').append($('<p>', { text: response['message'] }));
+            });
+        });
+    </script>
     <script src="{% static 'libs/vendor/jquery.steps/jquery.steps.js' %}"></script>
     <script src="{% static 'js/examples/example.js' %}"></script>
+    <script src="{% static 'js/examples/example_js.js' %}"></script>
 {% endblock scripts %}

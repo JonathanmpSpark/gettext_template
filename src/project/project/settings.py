@@ -54,8 +54,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'project.middlewares.language.UrlLanguageMiddleware',
     #'django.middleware.locale.LocaleMiddleware',
+    'project.middlewares.language.UrlLanguageMiddleware',
 ]
 
 ROOT_URLCONF = 'project.urls'
@@ -64,6 +64,10 @@ ROOT_URLCONF = 'project.urls'
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
 LOCALE_PATHS = (
+    # project
+    os.path.join(PROJECT_ROOT, 'project/locale/'), # py
+    os.path.join(PROJECT_ROOT, 'templates/project/locale'), # html
+    os.path.join(PROJECT_ROOT, 'static/js/project/locale'), # js
     # account
     os.path.join(PROJECT_ROOT, 'account/locale/'),
     os.path.join(PROJECT_ROOT, 'templates/account/locale'),
@@ -72,13 +76,9 @@ LOCALE_PATHS = (
     os.path.join(PROJECT_ROOT, 'examples/locale/'),
     os.path.join(PROJECT_ROOT, 'templates/examples/locale'),
     os.path.join(PROJECT_ROOT, 'static/js/examples/locale'),
-    # project
-    os.path.join(PROJECT_ROOT, 'project/locale/'),
-    os.path.join(PROJECT_ROOT, 'templates/project/locale'),
-    os.path.join(PROJECT_ROOT, 'static/js/project/locale'),
 )
 
-LANGUAGE_CODE = 'es-mx'
+LANGUAGE_CODE = 'en'
 
 LANGUAGES = (
     ('en', _('Ingles')),
@@ -86,9 +86,9 @@ LANGUAGES = (
     ('es', _('Español')),
 )
 
-TIME_ZONE = 'UTC'
-
 USE_I18N = True
+
+TIME_ZONE = 'UTC'
 
 USE_L10N = True
 
